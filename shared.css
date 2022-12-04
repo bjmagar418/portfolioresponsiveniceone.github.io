@@ -1,0 +1,317 @@
+* {
+    box-sizing: border-box;
+}
+:root{
+    --bg-color1:#0D1021;
+    --bg-color2:#302e47;
+    --bg-color3:#0C0B1B;
+    --header-color:#6675E2;
+    --hello-bigcolor:#ECE2E26E;
+    --hireme-color:#667BFB;
+    --cv-buttoncolor:#3C57F9;
+}
+html{
+ height: 100%;
+  
+}
+
+body {
+   font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 3.5rem auto fit-content(8rem);
+    height: 100%;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+                    
+}
+main{
+  /* min-height: calc(100vh-3.5rem-8rem);*/
+   /*margin-top: 3.5rem;*/
+   /*grid-row: 2/3;*/
+   grid-area: main;
+   background-color:var(--bg-color3);
+}
+ /*main header */
+.main-header{
+  height: 9.5%;
+    width: 100%;
+    background-color: var(--bg-color1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 10;
+}
+.backdrop{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+ }
+.toggle-button {
+    display: none;
+    width: 3.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+  
+  .toggle-button:focus {
+    outline: none;
+  }
+  
+  .toggle-button__bar {
+    height: 0.2rem;
+    background: white;
+    display: block;
+    margin: 0.6rem 0;
+  }
+.main-header__headtitle{
+    color: var(--header-color);
+    font-family: 'Roboto','Montserrat',sans-serif;
+    font-weight: 900;
+}
+.main-header__div{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    max-width: 12.5rem;
+}
+.main-header__brand img{
+    height: 3.75rem;
+    width: 3.75rem;
+}
+.main-nav__items{
+    width: 100%;
+    margin-right: 16.563rem;
+    display: flex;
+    align-items: center;
+    list-style:none;
+}
+.main-nav__item{
+   display: inline-block;
+   margin: 0 20px;
+
+}
+.main-nav__item a{
+    color:white;
+    font-family: 'Roboto','monospace',sans-serif;
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 5px;
+    text-align: center;
+}
+.main-nav__item a:hover{
+    background-color: #3C57F9;
+    cursor: pointer;
+    
+}
+.mobile-nav {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 80%;
+    height: 100vh;
+  }
+  
+  .mobile-nav__items {
+    width: 90%;
+    height: 100%;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mobile-nav__item {
+    margin: 1rem 0;
+  }
+  
+  .mobile-nav__item a {
+    font-size: 1.5rem;
+    list-style: none;
+    text-decoration: none;
+  }
+  .mobile-nav__item a:hover{
+    color: white;
+    background-color: #3C57F9;
+    padding: 8px;
+    border-radius: 5px;
+  }
+ /*mainheader finished */
+
+
+.footer-main{
+    background-color: var(--bg-color1);
+    text-align: center;
+   /* grid-row: 3/4;*/
+   grid-area: footer;
+}
+
+.footer-upper_section{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer-upper_sectioncard_header{
+  color: white;
+  font-size: 1.563rem;
+  text-align: center;
+}
+.footer-upper_sectioncard p{
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-family: 'Roboto','monospace','sans-serif';
+}
+.footer-upper_sectioncard_icon{
+  font-size: 1.563rem;
+  color: white;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+ 
+}
+.footer-upper_sectioncard_icon  a{
+  padding: 10px;
+}
+.footer-upper_sectioncard_icon  a:hover{
+  padding: 10px;
+  cursor:pointer;
+  color: #3C57F9;
+}
+.footer-upper_sectioncard_links{
+  color: white;
+  list-style: none;
+  font-size: 1.563rem;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Roboto','monospace','sans-serif';
+}
+.footer-upper_sectioncard_links li{
+  margin-right: 50px;
+  font-weight: 600;
+  font-family: 'Roboto','monospace','sans-serif';
+}
+.footer-upper_sectioncard_link{
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Roboto','monospace','sans-serif';
+}
+.footer-upper_sectioncard_link:hover{
+  text-align: center;
+  color: #3C57F9;
+  cursor: pointer;
+}
+.footer-upper_sectioncardi_items{
+  color: white;
+  font-size: 1.25rem;
+  list-style: none;
+  font-weight: 600;
+  font-family: 'Roboto','monospace','sans-serif';
+}
+.footer-upper_sectioncard_items{
+  color: white;
+  list-style: none;
+  font-weight: 500;
+  font-family: 'Roboto','monospace','sans-serif';
+}
+.footer-lower_section_copy{
+
+  padding: 20px;
+  color: white;
+  text-align: center;
+  font-weight: 800;
+  font-family: 'Roboto','monospace','sans-serif';
+}
+
+@media screen and (max-width:767px) {
+    .main-header__headtitle{
+        color: var(--header-color);
+        font-family: 'Roboto','Montserrat',sans-serif;
+        font-size: 1.2rem;
+        font-weight: 900;
+    }
+    .main-header__div{
+        display: flex;
+         justify-content: center;
+        align-content: center;
+        padding: 10px;
+    
+    }
+    .main-header__brand img{
+        height: 1.875rem;
+        max-width: 1.875rem;
+    }
+    .main-nav__item{
+     display: none;
+     }
+     
+     .toggle-button {
+        height: 2rem;
+        display: block;
+        width: 2.5rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      .toggle-button:focus {
+        outline: none;
+      }
+      
+      .toggle-button__bar {
+        height: 0.2rem;
+        background: white;
+        display: block;
+        margin:  0.3rem 0;
+      }
+      .mobile-nav {
+        display: none;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+
+        background: white;
+        width: 80vw;
+        height: 100%;
+      }
+      
+      .backdrop{
+        position: fixed;
+        display: none;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0,0,0,0.5);
+     }
+  
+     .footer-upper_section{
+      padding-right: 0px;
+     display: flex;
+     flex-direction: column;
+  
+    
+     }
+}
